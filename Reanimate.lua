@@ -1,4 +1,12 @@
 function LoadReanimation(Type,Velocity,Anims,FlingNow,LoadLib)
+  if game.Players.LocalPlayer["Character"]:FindFirstChild("Raw") then
+    game:GetService("StarterGui"):SetCore("SendNotification",
+    {
+       Title = "Gelatek Reanimation",
+       Text = "Couldn't Reanimate! (Already Running!)"
+    })
+    return
+ end
   local Reanimate = Type or "Raw"
   local NetlessValue = Velocity or Vector3.new(28.5,0,-1)
   local IsAnimating = Anims or false
@@ -275,4 +283,9 @@ function LoadReanimation(Type,Velocity,Anims,FlingNow,LoadLib)
    if LoadLibNow == true then
    	loadstring(game:HttpGet("https://raw.githubusercontent.com/Zaphick3L/MiscStuff/main/Loadlibrary.lua"))()
 	end
+  game:GetService("StarterGui"):SetCore("SendNotification",
+  {
+     Title = "Gelatek Reanimation",
+     Text = "Loaded! Created by: Gelatek (DSC ID: 734876821908095016). Enjoy!"
+  })
 end
