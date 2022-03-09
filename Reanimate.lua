@@ -280,7 +280,8 @@ function LoadReanimation(Type,Velocity,Anims,FlingNow,LoadLib)
    if LoadLibNow == true then
    	loadstring(game:HttpGet("https://raw.githubusercontent.com/Zaphick3L/MiscStuff/main/Loadlibrary.lua"))()
 	end
-   if IsAnimating == true then
+	workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Raw.Humanoid
+   if Anims == true then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Zaphick3L/MiscStuff/main/Anims.lua'))()
    end
   game:GetService("StarterGui"):SetCore("SendNotification",
@@ -289,3 +290,4 @@ function LoadReanimation(Type,Velocity,Anims,FlingNow,LoadLib)
      Text = "Loaded! Created by: Gelatek (DSC ID: 734876821908095016). Enjoy!"
   })
 end
+
