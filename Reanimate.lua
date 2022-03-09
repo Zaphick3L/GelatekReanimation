@@ -222,9 +222,6 @@ function LoadReanimation(Type,Velocity,Anims,FlingNow,LoadLib)
 	end)
       game:GetService("StarterGui"):SetCore("ResetButtonCallback", Bind)
    end
-   if IsAnimating == true then
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Zaphick3L/MiscStuff/main/Anims.lua'))()
-   end
    if FlingForBullet == true and Reanimate == "Death" or Reanimate == "Bullet" then
     local bulchar = workspace[game.Players.LocalPlayer.Name]
     local bullet = bulchar:FindFirstChild("RightUpperArm") or bulchar:FindFirstChild("Bullet") or bulchar:FindFirstChild("Right Arm")
@@ -283,7 +280,7 @@ function LoadReanimation(Type,Velocity,Anims,FlingNow,LoadLib)
    if LoadLibNow == true then
    	loadstring(game:HttpGet("https://raw.githubusercontent.com/Zaphick3L/MiscStuff/main/Loadlibrary.lua"))()
 	end
-	   if IsAnimating == true then
+   if IsAnimating == true then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Zaphick3L/MiscStuff/main/Anims.lua'))()
    end
   game:GetService("StarterGui"):SetCore("SendNotification",
