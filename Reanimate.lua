@@ -283,6 +283,9 @@ function LoadReanimation(Type,Velocity,Anims,FlingNow,LoadLib)
    if LoadLibNow == true then
    	loadstring(game:HttpGet("https://raw.githubusercontent.com/Zaphick3L/MiscStuff/main/Loadlibrary.lua"))()
 	end
+	   if IsAnimating == true then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Zaphick3L/MiscStuff/main/Anims.lua'))()
+   end
   game:GetService("StarterGui"):SetCore("SendNotification",
   {
      Title = "Gelatek Reanimation",
